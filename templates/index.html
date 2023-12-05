@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificador Automático de Ensayos</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .header {
+            background-color: #28b4b4; /* Azul claro */
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #11f377; /* Azul claro */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #7EC0EE; /* Un azul ligeramente más oscuro para el hover */
+        }
+
+        #calificacion {
+            font-size: 1.5em;
+            color: #3163ce;
+            margin-top: 20px;
+        }
+        .center-button {
+    text-align: center;
+    margin-top: 20px; /* Ajusta el margen superior según necesites */
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Calificador Automático de Ensayos</h1>
+    </div>
+
+    <div class="container">
+        <form method="post">
+            <textarea name="ensayo" rows="20" placeholder="Ingresa tu texto aquí...">{{ ensayo }}</textarea>
+
+            <br>
+            <div class="center-button">
+                <button type="submit">Calificar</button>
+            </div>
+           
+        </form>
+        {% if calificacion %}
+            <div id="calificacion">
+                Calificación: {{ calificacion }}
+            </div>
+        {% endif %}
+       
+    </div>
+
+    <script>
+        // Tu script aquí (si es necesario)
+    </script>
+</body>
+</html>
+
